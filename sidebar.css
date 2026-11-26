@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap");
+:root{
+    --right-panel-color-start:#9faab5;
+    --right-panel-color-end:#7d8b9e;
+
+    --left-panel-color-start:#1c2e4a;
+    --left-panel-color-end: #0f1b29;
+
+    --brand-color: #a1c2d3;/*sirket adinin rengi*/
+
+    --form-wrapper-color-start: #e2e8f0;/*sagdaki form wrapperin arka renk radient baslangic rengi*/
+    --form-wrapper-color-end: #cbd5e1;/*sagdaki form wrapperin arka renk radient bitis rengi*/
+    /*background: radial-gradient(circle at center, #e2e8f0 0%, #cbd5e1 100%); Bu kullanildi*/
+
+    --button-color: #0f172a;/*submit butonunun(Sign in ve Create Account) rengi*/
+    --dark-text-color: #111;/*sagdaki welcome back ve sign up yazilarinin rengi*/
+    --text-color: #555;/*soldaki butonların yazisi, sagdaki alt basligin, forgot password, create one, sign in link ve input ustundeki labellarin yazı rengi*/
+    --user-btn-wrapper-color: #ffffff0d;/*soldaki butonların wrapperinin rengi*/
+    --input-color: #f8fafc;/*inputların arka rengi*/
+
+    --mid-dark-text-color: #848689; /* have account sorusunun yazı rengi*/
+    --user-btn-color: #e6e9eb;/*soldaki butonların rengi*/
+    --primary-blue: #a3c4e0;/*soldaki acik mavi yazilarin rengi*/
+    --left-white-text-color: #ffffff;/*soldaki beyaz yazinin rengi*/
+
+    /*Birbirine uyumlu olam renkler buldum buraya koydum kullanilabilir.*/
+    --left-bg: #223244;
+    --text-muted: #8c9eb3;
+    --border-color: #3b5068;
+    --right-text: #1a202c;
+    --right-muted: #64748b;
+    --input-bg: #d1d5db;
+    --deneme: rgb(77, 124, 255);
+    
+    --border:#c6c8ca;
+    --primary:#285da8;
+
+    --font-family: libre baskerville, inter, sans-serif;/*Ana fontumuz*/
+
+    /*--primary:#3574cd;
+    --sidebar:#203046;
+    --background:#d3d9db;
+    --font-family: libre baskerville, inter, sans-serif; */
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    min-height:100vh;
+    font-family: var(--form-wrapper-color-start);
+}
+.page-container{
+    display:flex;
+    background-color: #7da4b1;
+    min-width: 100%;
+    min-height:100vh;
+    background: radial-gradient(circle at center, 
+        var(--right-panel-color-start) 50%, 
+        var(--right-panel-color-end) 100%);
+}
+.sidebar{
+    background: linear-gradient(135deg, 
+        var(--left-panel-color-start) 0%, 
+        var(--left-panel-color-end) 100%);
+
+    display:flex;
+    flex-direction: column;
+    color: #e0ebf0;
+    text-align:left;
+    padding:10px;
+    width: 250px;
+    
+    flex: 0 0 250px;
+}
+.sidebar-logo{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    flex-direction: column;
+    
+    color:var(--brand-color);
+    font-size: 13px;
+    font-family: var(--font-family);
+    
+    margin-top:20px;
+}
+.sidebar-logo-head{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    padding-right:10px;
+    font-family: "Playfair Display", serif;
+}
+.logo-image{
+    width:40px;
+    height:auto;
+    border-radius: 50%;
+}
+.sidebar-menu{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display:flex;
+    
+    flex-direction: column;
+    gap:5px;
+    text-align:left;
+    margin-left:10px;
+    margin-top:5px;
+    font-size: 20px;
+    padding-top:40px;
+
+    color: var(--primary-blue);
+}
+
+.sidebar-link{
+    display:flex;
+    text-align:left;
+    align-items:center;
+    text-decoration:none;
+    gap:8px;
+    padding-top:10px;
+    height: 40px;
+    width: 90%;
+    padding-left: 5px;
+    margin-top: 5px;
+    border-radius: 8px;
+    
+    color: var(--left-white-text-color);
+}
+.sidebar-link:hover{
+    background-color: #1559b8;
+    border-radius: 8px;
+
+    transform: translateY(-1px);
+}
+.sidebar-link.active{
+    background-color: #2f6bc2;
+}
+.sidebar-link.active:hover{
+    background-color: #2f6bc2;
+}

@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap");
+/*Ana fontumuzun linki*/
+
+:root {
+    --right-panel-color-start:#9faab5;/*sagdaki panelin arka renk radient baslangic rengi*/
+    --right-panel-color-end:#7d8b9e;/*sagdaki panelin arka renk radient bitiş rengi*/
+    /*background: radial-gradient(circle at center, #9faab5 50%, #7d8b9e 100%); Bu kullanıldı*/
+
+    --left-panel-color-start:#1c2e4a;/*soldaki panelin arka renk radient baslangic rengi*/
+    --left-panel-color-end: #0f1b29;/*soldaki panelin arka renk radient bitiş rengi*/
+    /*background: linear-gradient(135deg, #1c2e4a 0%, #0f1b29 100%); Bu kullanildi*/
+
+    --brand-color: #a1c2d3;/*sirket adinin rengi*/
+    --form-wrapper-color-start: #e2e8f0;/*sagdaki form wrapperin arka renk radient baslangic rengi*/
+    --form-wrapper-color-end: #cbd5e1;/*sagdaki form wrapperin arka renk radient bitis rengi*/
+    /*background: radial-gradient(circle at center, #e2e8f0 0%, #cbd5e1 100%); Bu kullanildi*/
+
+    --button-color: #0f172a;/*submit butonunun(Sign in ve Create Account) rengi*/
+    --dark-text-color: #111;/*sagdaki welcome back ve sign up yazilarinin rengi*/
+    --text-color: #555;/*soldaki butonların yazisi, sagdaki alt basligin, forgot password, create one, sign in link ve input ustundeki labellarin yazı rengi*/
+    --user-btn-wrapper-color: #ffffff0d;/*soldaki butonların wrapperinin rengi*/
+    --input-color: #f8fafc;/*inputların arka rengi*/
+    --mid-dark-text-color: #848689; /* have account sorusunun yazı rengi*/
+    --user-btn-color: #e6e9eb;/*soldaki butonların rengi*/
+    --primary-blue: #a3c4e0;/*soldaki acik mavi yazilarin rengi*/
+    --left-white-text-color: #ffffff;/*soldaki beyaz yazinin rengi*/
+
+    /*Birbirine uyumlu olam renkler buldum buraya koydum kullanilabilir.*/
+    --left-bg: #223244;
+    --text-muted: #8c9eb3;
+    --border-color: #3b5068;
+    --right-text: #1a202c;
+    --right-muted: #64748b;
+    --input-bg: #d1d5db;
+    --deneme: rgb(77, 124, 255);
+
+    --font-family: libre baskerville, inter, sans-serif;/*Ana fontumuz*/
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-family);
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.right-panel {
+    background: radial-gradient(circle at center, var(--right-panel-color-start) 50%, var(--right-panel-color-end) 100%);
+    width: 55%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} 
+
+.right-panel h1 {
+    font-size: 2.4rem;
+    color: #111;
+    margin-bottom: 3px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.left-panel {
+    width: 45%;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(135deg, var(--left-panel-color-start) 0%, var(--left-panel-color-end) 100%);
+}
+
+.logo-header {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 40px;
+}
+
+.brand-logo {
+    width: 40px;  
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left-panel h1 {
+    font-size: 2rem;
+    color: var(--brand-color);
+    margin-bottom: 0;
+    margin: 0;
+}
+
+
+.form-wrapper {
+    background: radial-gradient(circle at center, var(--form-wrapper-color-start) 0%, var(--form-wrapper-color-end) 100%);
+    width: 100%;
+    max-width: 650px;
+    border: none;
+    border-radius: 16px;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper p {
+    color: var(--text-color);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: var(--input-color);
+    border: 1px solid var(--mid-dark-text-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.1s ease;
+}
+.form-group:hover{
+    transform: translateY(-1px);
+
+}
+
+input:focus {
+    border-color: var(--mid-dark-text-color);
+    border-width: 2px;
+}
+
+form input::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+.have-account-text {
+    font-size: 1.2rem;
+    color: var(--mid-dark-text-color);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    font-weight: 600;
+}
+.submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.user-type-wrapper {
+    padding: 15px 20px;
+    background-color: var(--user-btn-wrapper-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    border: none;
+    justify-content: center;
+    align-items: flex-start;
+    width: fit-content;
+    flex-direction: column;
+    gap: 8px;
+    transform: scale(0.8); 
+    transform-origin: center;
+    display: inline-flex;
+    margin-left: auto;
+    margin-bottom: 1px;
+}
+
+.user-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 1.5px;
+}
+
+.user-type-wrapper .user-type-btns {
+    display: flex;
+    gap: 5px;
+}
+
+.user-type-wrapper .btn-outline-primary {
+    width: 50%;
+    height: 100%;
+    background-color: var(--user-btn-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    outline: solid 1px var(--text-color);
+    margin: 0;
+    
+}
+
+.user-type-wrapper.user-type-btns:focus{
+    background-color: #4d7cff;
+}
+
+.hero-content {
+    margin-bottom: 60px;
+}
+.eyebrow {
+    font-size:1.1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: 40px;
+}
+.hero-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--left-white-text-color)
+}
+.hero-content p {
+    color: var(--primary-blue);
+    font-size: 1rem;
+    line-height: 1.8;
+
+    max-width: 540px;
+}
+.timeline{
+    display:flex;
+    align-items:center; 
+    justify-content:flex-start;
+    margin-top: 10px; 
+    margin-bottom: 120px;
+    }
+.step{ 
+    display:flex; 
+    flex-direction:column;
+    align-items:center;
+    } 
+.circle{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#6b7280; 
+    } 
+.line{ 
+    width:90px;
+    background:#6b7280;
+    flex-grow: 1;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 10px;
+    transform: translateY(-12px);
+    }
+.step span{
+    margin-top:10px;
+    font-size:14px;
+    color:white; 
+    } 
+.active .circle{
+    background:#58d68d; 
+    } 
+.active + .line{ 
+    background:#58d68d; 
+    } 
+.current .circle{
+    background:#4d7cff; 
+    }
+
+/*reset password page*/
+.reset-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(circle at center, var(--right-panel-color-start) 30%, var(--right-panel-color-end) 100%);
+
+}
+.reset-password-form {
+    max-width: 800px;
+    width: 100%;
+}
+.reset-password-form form {
+    background: radial-gradient(circle at center, var(--form-wrapper-color-start) 0%, var(--form-wrapper-color-end) 100%);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: none;
+}
+.reset-password-container p {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--deneme);
+    text-decoration: underline;
+}
+
+.fade-anim{
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+
+}
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-anim{
+    transform: translateX(30px);
+    opacity: 0;
+    animation: slideLeft 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+@keyframes slideLeft {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pulse-dot {
+    border-radius: 50%;
+    animation: pulseAnim 2s infinite; 
+}
+@keyframes pulseAnim {
+    0% {
+        box-shadow: 0 0 0 0 #4d7cff; 
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(74, 222, 128, 0); 
+        transform: scale(1.15);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+        transform: scale(1);
+    }
+}
+@media(max-width: 1100px){
+    .main-container{
+    width: min(600px, 100%);
+    }
+}
+

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #203046;
+    --secondary-color: #a1c2d3;
+    --background-color: #daddde;
+    --button-color: #1C1C21;
+    --text-color: #555;
+
+    /* Theme Palette */
+    --left-bg: #203046;
+    --right-bg: #949ca5;
+    --primary-blue: #a3c4e0;
+    --text-white: #ffffff;
+    --text-muted: #8c9eb3;
+    --border-color: #3b5068;
+    --font-serif: 'Libre Baskerville', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    --form-wrapper-color-start: #e2e8f0;
+    --form-wrapper-color-end: #cbd5e1;
+    --right-panel-color-start: #9faab5;
+    --right-panel-color-end: #7d8b9e;
+    --dark-text-color: #111;
+    --text-color: #555;
+    --mid-dark-text-color: #848689;
+    --input-color: #f8fafc;
+    --border: #c6c8ca;
+    --button-color: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.dashboard-body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background-color: var(--right-bg);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--left-bg);
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 32px;
+    height: auto;
+}
+
+.sidebar h1 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.eyebrow {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: var(--primary-blue);
+    display: block;
+    margin-top: 6px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 35px;
+}
+
+.menu-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.menu-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.menu-link:hover,
+.menu-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+}
